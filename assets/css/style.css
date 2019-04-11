@@ -3,11 +3,8 @@
     display: none;
   }
 }
+
 @media screen and (max-width: 1080px) {
-  header img {
-    margin-left: 15vw !important;
-    margin-right: 15vw !important;
-  }
   .side-bar:nth-child(n + 1) {
     display: none;
   }
@@ -18,6 +15,9 @@
   }
   header .items-2:nth-child(n + 1) {
     display: none;
+  }
+  header {
+    justify-content: center !important;
   }
 
   main .comment-share .social-share:nth-child(n + 1) {
@@ -143,7 +143,7 @@ button:hover {
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 42px;
   position: fixed;
@@ -156,8 +156,6 @@ header {
 
 header img {
   height: 29px;
-  margin-left: 25vw;
-  margin-right: 25vw;
 }
 
 header .items-3 {
@@ -165,6 +163,7 @@ header .items-3 {
   justify-content: space-between;
   align-items: center;
   margin-left: 15px;
+  min-width: 225px;
 }
 
 .header-icons {
@@ -201,19 +200,57 @@ header a:visited {
 
 header .items-2 {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-right: 15px;
+  width: 225px;
 }
 
+/* main section */
+
 main {
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#main-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  margin: 50px auto;
+  /* border: 2px red solid; */
+  width: 80%;
+}
+
+#main-title h1 {
+  font-size: 34px;
+  font-weight: 500;
+  font-style: italic;
+  margin: 20px auto;
+  width: 500px;
+  line-height: 1.3em;
+}
+
+#main-title img {
+  max-width: 100%;
+  height: auto;
+  max-height: 675px;
+  margin: 10px auto;
+}
+
+#main-title p {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 main article {
   margin: auto;
-  width: 50%;
-  max-width: 600px;
+  min-width: 70%;
+  max-width: 400px;
   background-color: white;
 }
 
@@ -263,18 +300,6 @@ main .icons a:link {
 main article .img-box {
   position: relative;
   margin: 30px 0;
-}
-
-.jumbo-img {
-  position: relative;
-  margin: 30px 0;
-  left: -38%;
-}
-
-.jumbo-img img,
-.jumbo-img p {
-  width: 176%;
-  max-width: 1000px;
 }
 
 .large-img {
