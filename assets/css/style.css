@@ -91,7 +91,7 @@ h1 {
   line-height: 1.2em;
 }
 h3 {
-  font-size: 18px;
+  font-size: 16px;
   text-transform: capitalize;
   font-weight: 800;
 }
@@ -244,28 +244,44 @@ main {
 
 #main-title p {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 5px auto;
+  padding-right: 250px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1080px) {
+  #main-title {
+    width: 100%;
+  }
+  #main-title p {
+    margin: 0 20px;
+    padding: 0;
+  }
 }
 
 main article {
-  margin: auto;
-  min-width: 70%;
-  max-width: 400px;
-  background-color: white;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
-main .date {
-  display: inline-block;
+#main-article-header {
+  display: block;
+  height: 90px;
 }
-main .date + .icons {
+
+#social-share {
   float: right;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 
-main .icons a:link {
+#main-article-header a {
   text-decoration: none;
   color: black;
+}
+
+#main-article-header h3 a:hover {
+  text-decoration: underline;
 }
 
 .social-share a {
