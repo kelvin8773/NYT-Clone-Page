@@ -294,6 +294,7 @@ main article {
 
 .social-share i:hover {
   background-color: white;
+  text-shadow: 1px 1px 3px #6c8fb3;
 }
 
 .other-icons i {
